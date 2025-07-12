@@ -1,4 +1,30 @@
+.app-blog__title {
+  text-decoration: underline wavy black;
+}
+
 .entry-data {
   display: flex;
-  
+  flex-flow: column;
+  row-gap: 10px;
+
+  & .entry-data__btn--primary {
+    width: fit-content;
+    --color: var(--btn-primary);
+    --dark-color: color-mix(in srgb, var(--color), black 25%);
+    --light-color: color-mix(in srgb, var(--color), white 25%);
+
+    border: 1px solid var(--dark-color);
+    border-bottom-width: 8px;
+    border-top-color: var(--light-color);
+    background: var(--color);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    transition: transform 0.2s, border 0.2s;
+
+    &:active {
+      border-bottom-width: 1px;
+      transform: translateY(7px);
+      background: var(--dark-color);
+    }
+  }
 }
