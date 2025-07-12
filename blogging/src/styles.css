@@ -4,5 +4,19 @@
   --tertiary-color: yellow;
 
   --btn-primary: tomato;
-
+}
+.news-card {
+  max-width: 250px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align:center;
+  background-color: rgba(231, 210, 206, 0.938);
+  & .wrapper_img{
+    width: auto;
+    height: 250px;
+  } 
+}
+.left{
+  color: grey;
+  float: right;
 }
