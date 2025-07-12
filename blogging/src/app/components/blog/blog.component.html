@@ -1,16 +1,30 @@
 <h3 class="app-blog__title">Entrada de datos</h3>
 <div class="entry-data">
 
-  <input type="text" class="entry-data__input entry-data__input--title"
-    placeholder="Introduzca el título de la noticia:">
-  <input type="url" class="entry-data__input entry-data__input--url" placeholder="Introduzca la url de la imagen:">
-  <textarea class="entry-data__input entry-data__input--textarea"
-    placeholder="Introduzca el cuerpo de la noticia: (Límite 350 caracteres)" maxlength="350"></textarea>
+  <input 
+    type="text" class="entry-data__input entry-data__input--title"
+    placeholder="Introduzca el título de la noticia:"
+    [(ngModel)]="noticia.title"
+    >
+  <input 
+    type="url" class="entry-data__input entry-data__input--url" 
+    placeholder="Introduzca la url de la imagen:"
+    [(ngModel)]="noticia.url"
+    >
+  <textarea 
+    class="entry-data__input entry-data__input--textarea"
+    placeholder="Introduzca el cuerpo de la noticia: (Límite 350 caracteres)" 
+    maxlength="350"
+    [(ngModel)]="noticia.textArea"
+    ></textarea>
   <div>
     <label for="entry-date__input--date">Introduzca fecha de la publicación: </label>
-    <input type="date" class="entry-data__input entry-data__input--date" id="entry-date__input--date">
+    <input type="date" class="entry-data__input entry-data__input--date" 
+    id="entry-date__input--date"
+    [(ngModel)]="noticia.date">
   </div>
-  <button class="entry-data__btn entry-data__btn--primary">Enviar Noticia</button>
+  <button class="entry-data__btn entry-data__btn--primary" (click)="cargarNoticia()">Enviar Noticia</button>
 
 </div>
-<div class="list-news"></div>
+<div class="list-news" [innerHTML]="pintarNoticias()">
+</div>
