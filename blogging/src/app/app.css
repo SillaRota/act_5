@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  text-transform: uppercase;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+
+
+  & .banner {
+    display: flex;
+    padding: 10px;
+    border: 2px solid rgb(218, 206, 68);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(218, 206, 68);
+    background-color: rgb(68, 218, 206, 0.4);
+    color: rgb(206, 68, 218, 0.7);
+    letter-spacing: 1px;
+  }
+}
+
+
+.blog--grid {
+  display: grid;
+  grid-auto-flow: row;
+  color: var()
+}
